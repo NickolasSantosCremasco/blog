@@ -10,7 +10,12 @@ const Navbar = () => {
                 <Image src="/youtube.png" alt="facebook" width={24} height={24}></Image>
             </div>
             <div className={styles.logo}>Nickolas Blog</div>
-            <div className={styles.links}></div>
+            <div className={styles.links}>
+                <Link href="/">Inicial</Link>
+                <Link href="/">Contato</Link>
+                <Link href="/">Sobre mim</Link>
+                <Link href="/">Login</Link>
+            </div>
             <div className={styles.links}></div>
         </div>
     )
