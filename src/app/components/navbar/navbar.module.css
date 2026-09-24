@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: space-between;
+   
     align-items: center;
     height: 100px;
 }
@@ -22,5 +23,7 @@
 .links {
     display: flex;
     gap: 20px;
+    background-color: red;
     flex: 1;
+    font-size: 20px;
 }
