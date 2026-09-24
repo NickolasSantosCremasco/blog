@@ -1,4 +1,5 @@
 
+import CardList from "./components/CardList/CardList";
 import CategoryList from "./components/CategoryList/CategoryList";
 import Featured from "./components/featured/Feature";
 import styles from "./homepage.module.css";
@@ -10,7 +11,7 @@ export default function Home() {
       <Featured/>
       <CategoryList/>
       <div className={styles.content}>
-        <Card
+        <CardList/>
       </div>
    </div>
   );
