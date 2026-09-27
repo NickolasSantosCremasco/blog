@@ -23,7 +23,7 @@
 .links {
     display: flex;
     gap: 20px;
-    background-color: red;
+    
     flex: 1;
     font-size: 20px;
 }
