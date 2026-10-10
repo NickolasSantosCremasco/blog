@@ -1,0 +1,53 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    padding-bottom: 20px 0;
+    justify-content: space-between; /* Melhor espaçamento entre info e links */
+    color: var(--softTextColocar);
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoText {
+    font-size: 24px;
+}
+
+.desc {
+    font-weight: 300;
+}
+
+.icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px; /* Espaço entre as colunas de links */
+    font-weight: 300;
+}
+
+/* Faltava esta classe no seu CSS */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listTitle {
+    font-weight: bold;
+}
