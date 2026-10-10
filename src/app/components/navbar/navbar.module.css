@@ -1,7 +1,6 @@
 .container {
     display: flex;
     justify-content: space-between;
-   
     align-items: center;
     height: 100px;
 }
@@ -17,18 +16,18 @@
     text-align: center;
     font-weight: bold;
     font-size: 36px;
-
 }
 
 .links {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: flex-end; /* Adicionado para empurrar os links para a direita no desktop */
     flex: 1;
     font-size: 20px;
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
     .logo {
         font-size: 32px;
     }
@@ -36,10 +35,9 @@
         font-size: 18px;
         gap: 15px;
     }
-    
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
     .social {
         display: none;
     }
@@ -48,19 +46,15 @@
     }
 }
 
- @media screen and (max-width:768px) {
-        .logo {
-            text-align: left;
-        }
+@media screen and (max-width: 768px) {
+    .logo {
+        text-align: left;
+    }
 }
 
-@media screen and (max-width:640px) {
-    .links {
-        justify-content: flex-end;
-    }
-    
+@media screen and (max-width: 640px) {
     .link {
         display: none;
     }
-    
+    /* Não precisa mais de justificar aqui, pois já foi justificado na classe .links principal */
 }
