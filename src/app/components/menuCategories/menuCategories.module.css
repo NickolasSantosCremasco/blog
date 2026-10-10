@@ -1,4 +1,5 @@
-.categoryItem {
+/* Esta é a classe do seu container (a div que envolve os links) */
+.categoryList {
     margin-top: 35px;
     margin-bottom: 60px;
     display: flex;
@@ -6,25 +7,31 @@
     gap: 20px;
 }
 
+/* Esta é a classe de cada botão (Link) */
 .categoryItem {
-    padding-inline: 10px 25px;
+    padding: 10px 25px; /* Define a altura e largura com base no texto */
     font-size: 14px;
-    border-radius: 10px ;
+    border-radius: 10px; /* Arredonda os cantos */
+    color: white; /* Adiciona cor branca ao texto para contrastar com os fundos escuros */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* --- Cores Individuais --- */
 
-.category.travel {
+.technology { /* Corrigido o erro de digitação */
+    background-color: #ff7887;
+}
+
+.travel { /* Removido o ".category" da frente */
     background-color: #ff7857;
+}
+
+.enterprenourship {
+    background-color: #775aec;
 }
 
 .culture {
     background-color: #ffb14f;
-}
-
-.technolgy {
-    background-color: #ff7887;
-} 
-
-.enterprenourship {
-    background-color: #775aec;
 }
