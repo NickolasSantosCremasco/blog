@@ -24,7 +24,7 @@ const Comments = () => {
                 <span className={styles.date}>01.01.2026</span>
             </div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero earum possimus magnam voluptatibus similique, fugit facere dicta nemo quos saepe nam tempore voluptates! Incidunt veritatis earum eos blanditiis officiis! Quidem!</p>
+          <p className={styles.desc}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero earum possimus magnam voluptatibus similique, fugit facere dicta nemo quos saepe nam tempore voluptates! Incidunt veritatis earum eos blanditiis officiis! Quidem!</p>
         </div>
       </div>
     </div>
