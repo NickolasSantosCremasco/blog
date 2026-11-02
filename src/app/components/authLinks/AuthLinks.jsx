@@ -2,20 +2,23 @@
 import { useState } from "react";
 import styles from "./authLinks.module.css"; // Corrigido de autoLinks para authLinks
 import Link from "next/link";
+import { signOut, useSession } from "next-auth/react";
 
 const AuthLinks = () => {
     const [open, setOpen] = useState(false);
-    const status = "notauthenticated";
+    const { data: session, status } = useSession();
 
     return (
         <>
             {/* Links do Desktop (A classe styles.link faz eles sumirem no celular) */}
-            {status === "notauthenticated" ? (
+            {status === "unauthenticated" ? (
                 <Link href="/login" className={styles.link}>Login</Link>
             ) : (
                 <>
-                    <Link href="/write" className={styles.link}>Write</Link>
-                    <span className={styles.link}>Logout</span>
+                    <Link href="/write" className={styles.link}>
+                        Write
+                    </Link>
+                    <span className={styles.link} onClick={signOut}>Logout</span>
                 </>
             )}
 

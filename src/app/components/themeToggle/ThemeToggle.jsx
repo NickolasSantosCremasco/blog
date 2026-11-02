@@ -16,7 +16,7 @@ const ThemeToggle = () => {
     <div className={styles.container} onClick={toggle} style={
         theme === "dark" 
           ? {background:"white"} 
-          : {background:"#0f172a"}
+        : {background:"#0f172a"}
           }>
       
       <Image src="/moon.png" alt="moon" width={14} height={14}></Image>
