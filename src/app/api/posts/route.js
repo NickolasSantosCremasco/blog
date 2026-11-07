@@ -5,28 +5,29 @@ export const GET = async (req) => {
     const { searchParams } = new URL(req.url);
 
     const page = Math.max(1, Number(searchParams.get("page")) || 1);
+    const cat = searchParams.get("cat")
     const POST_PER_PAGE = 2;
-
-    try {
-        const posts = await prisma.post.findMany({
+       const posts = await prisma.post.findMany({
             take: POST_PER_PAGE,
-            skip: POST_PER_PAGE * (page - 1)
+            skip: POST_PER_PAGE * (page - 1),
+            where: {
+                ...(cat && {catSlug:cat}),
+            }
         });
 
-        // Conta quantos posts existem no banco
-        const count = await prisma.post.count();
+     try {
+        const [posts, count] = await prisma.$transaction([
+        prisma.post.findMany(query),
+        prisma.post.count({ where: query.where }),
 
-        return NextResponse.json(
-            { posts, count },
-            { status: 200 }
-        );
+        ]);
 
+        return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
     } catch (err) {
-        console.error("Erro ao buscar posts:", err);
-
-        return NextResponse.json(
-            { message: "Something went wrong!" },
-            { status: 500 }
+        
+        console.log(err);
+        return new NextResponse(
+        JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
         );
     }
-};
+    };
