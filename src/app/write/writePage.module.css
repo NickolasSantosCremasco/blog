@@ -1,6 +1,4 @@
-.container {
 
-}
 
 .editor {
     display: flex;
@@ -46,6 +44,32 @@
 
 .input::placeholder {
     color: #b3b3b1;
+}
+
+.textArea {
+    width: 100%;
+}
+
+.select {
+    margin: 0 50px 30px 50px;
+    padding: 10px 20px;
+    width: max-content;
+    border-radius: 8px;
+    border: 1px solid var(--softTextColor);
+    background-color: var(--bg);
+    color: var(--textColor);
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.select:focus {
+    border-color: #1a8917;
+}
+
+.select option {
+    background-color: var(--bg);
+    color: var(--textColor);
 }
 
 .textArea {

@@ -91,12 +91,16 @@ const WritePage = () => {
         className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <input
-        type="text"
-        placeholder="Categoria (ex: tecnologia, codigo)"
-        className={styles.input}
-        onChange={(e) => setCatSlug(e.target.value.toLowerCase().trim())}
-      />
+      <select
+        className={styles.select}
+        onChange={(e) => setCatSlug(e.target.value)}
+        defaultValue="tecnologia"
+      >
+        <option value="tecnologia">Tecnologia</option>
+        <option value="codigo">Código</option>
+        <option value="empreendedorismo">Empreendedorismo</option>
+        <option value="cultura">Cultura</option>
+      </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
           <Image src="/plus.png" alt="" width={16} height={16} />
