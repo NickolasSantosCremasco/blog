@@ -14,10 +14,10 @@ const Featured = () => {
                 </div>
                 <div className={styles.textContainer}>
                     <h1 className={styles.postTitle}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid provident minima officia consectetur fugiat exercitationem, aliquam qui sit dolorum saepe commodi. Expedita veritatis animi eos laboriosam porro at excepturi amet.
+                        Entre linhas de código, ideias de negócios e boas leituras: um espaço para pensar em voz alta.
                     </h1>
                     <p className={styles.postDesc}>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic repellendus ut ea iusto inventore similique quidem sequi a, voluptas voluptate, doloribus necessitatibus id magnam blanditiis tempore minima magni sit.
+                        Mais do que tutoriais técnicos, este blog reúne anotações reais sobre engenharia de software, empreendedorismo, economia e cultura. Um arquivo vivo das minhas experiências, erros, descobertas e projetos em evolução.
                     </p>
                     {/* Faltava a classe no botão aqui */}
                     <button className={styles.button}>Leia Mais!</button>

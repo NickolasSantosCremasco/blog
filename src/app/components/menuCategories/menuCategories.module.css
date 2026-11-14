@@ -1,4 +1,4 @@
-/* Esta é a classe do seu container (a div que envolve os links) */
+/* Container que envolve os links */
 .categoryList {
     margin-top: 35px;
     margin-bottom: 60px;
@@ -7,31 +7,45 @@
     gap: 20px;
 }
 
-/* Esta é a classe de cada botão (Link) */
+/* Estilo base de cada botão (Link) */
 .categoryItem {
-    padding: 10px 25px; /* Define a altura e largura com base no texto */
+    padding: 10px 25px;
     font-size: 14px;
-    border-radius: 10px; /* Arredonda os cantos */
-    color: white; /* Adiciona cor branca ao texto para contrastar com os fundos escuros */
+    border-radius: 10px;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
-/* --- Cores Individuais --- */
+.categoryItem:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
 
-.technology { /* Corrigido o erro de digitação */
+/* --- Cores Individuais (iguais aos slugs do banco) --- */
+
+.tecnologia {
     background-color: #ff7887;
 }
 
-.travel { /* Removido o ".category" da frente */
-    background-color: #ff7857;
+.codigo {
+    background-color: #5e81ac;
 }
 
-.enterprenourship {
+.empreendedorismo {
     background-color: #775aec;
 }
 
-.culture {
+.cultura {
     background-color: #ffb14f;
+}
+
+.ia {
+    background-color: #da85c7;
+}
+
+.financas {
+    background-color: #7fb881;
 }
